@@ -1,3 +1,4 @@
+<div class="ion-page">
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
@@ -16,5 +17,21 @@
   <div id="container">
     <strong>Ready to create an app?</strong>
     <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-button id="open-modal" expand="block">Open</ion-button>
+
+    <ion-modal trigger="open-modal" [presentingElement]="presentingElement" [mode]="'ios'">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>Welcome</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <p>Modal content</p>
+          <ion-button expand="block" (click)="closeModal()">Close</ion-button>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
   </div>
 </ion-content>
+</div>
